@@ -121,7 +121,7 @@ kubectl apply -f redis-service.yaml
 To add a TCP service to the nginx ingress controller you can run the following command:
 
 ```shell
-kubectl patch configmap tcp-services -n ingress-nginx --patch '{"data":{"6379":"default/redis-service:6379"}}'
+kubectl patch configmap tcp-services -n ingress-nginx --patch "{\"data\":{\"6379":\"default/redis-service:6379\"}}"
 ```
 
 Where:
